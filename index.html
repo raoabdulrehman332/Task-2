@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+
+    <style>
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2{
+            margin-left: 20px;
+        }
+        .ans{
+            margin-left: 50px;
+            text-align: center;
+            justify-content: left;
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task-2</h1>
+    <h2>Q2: Write a JavaScript program to get the current date. <br>
+        Expected Output : <br>
+        mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</h2> 
+
+    <script>
+        var now = new Date();
+        var day = now.getDate();
+        var month = now.getMonth()+1;
+        var year = now.getFullYear();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var second = now.getSeconds();
+       if (day <= 9) {
+        day = "0" + day
+       }else{
+        day = day
+       }
+
+
+       if (month <= 9) {
+        month = "0" + month
+       }else{
+        month = month
+       }
+        var Output1 = month +"-"+ day +"-"+ year
+        var Output2 = month +"/"+ day +"/"+ year
+        var Output3 = day +"-"+ month +"-"+ year
+        var Output4 = day +"/"+ month +"/"+ year
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var Output =  "Today is :" + dayNames[day]
+
+        document.write(`<h1 class="ans">OutPut-1 : ${Output1}`)
+        document.write(`<h1 class="ans">OutPut-2 : ${Output2}`)
+        document.write(`<h1 class="ans">OutPut-3 : ${Output3}`)
+        document.write(`<h1 class="ans">OutPut-4 : ${Output4}`)
+        
+    </script>
+</body>
+</html>
